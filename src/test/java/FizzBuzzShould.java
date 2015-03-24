@@ -8,6 +8,8 @@ import static org.hamcrest.Matchers.is;
  */
 public class FizzBuzzShould {
 
+	private static final int MAX_TEST = 1000;
+
 	@Test
 	public void return_the_same_number_for_an_input_not_matching_divisors () {
 
@@ -22,6 +24,15 @@ public class FizzBuzzShould {
 	@Test
 	public void calculate_fizzbuzz_for_five(){
 		assertThat(fizzBuzz(5), is("buzz"));
+	}
+
+	@Test
+	public void calculate_fizzbuzz_for_multiples_of_3(){
+
+		for (int i = 3; i < MAX_TEST; i+=3)
+		{
+			assertThat(fizzBuzz(i), is("fizz"));
+		}
 	}
 
 	private String fizzBuzz (final int num) {
