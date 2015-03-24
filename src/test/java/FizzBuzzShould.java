@@ -35,6 +35,11 @@ public class FizzBuzzShould {
 		assertThat(fizzBuzz(15), is("fizzbuzz"));
 	}
 
+	@Test
+	public void calculate_fizzbuzz_for_ten(){
+		assertThat(fizzBuzz(10), is("buzz"));
+	}
+
 	private String fizzBuzz (final int num) {
 
 		String result = "1";
