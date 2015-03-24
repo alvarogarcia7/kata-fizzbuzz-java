@@ -17,25 +17,23 @@ public class FizzBuzzShould {
 	}
 
 	@Test
-	public void calculate_fizzbuzz_for_multiples_of_5_lower_than_15(){
+	public void calculate_fizzbuzz_for_multiples_of_5_lower_than_15 () {
 
-		for (int i = 5; i < 3*5; i+=5)
-		{
+		for (int i = 5; i < 3 * 5; i += 5) {
 			assertThat(fizzBuzz(i), is("buzz"));
 		}
 	}
 
 	@Test
-	public void calculate_fizzbuzz_for_multiples_of_3_lower_than_15(){
+	public void calculate_fizzbuzz_for_multiples_of_3_lower_than_15 () {
 
-		for (int i = 3; i < 3*5; i+=3)
-		{
+		for (int i = 3; i < 3 * 5; i += 3) {
 			assertThat(fizzBuzz(i), is("fizz"));
 		}
 	}
 
 	@Test
-	public void calculate_fizzbuzz_for_fifteen(){
+	public void calculate_fizzbuzz_for_fifteen () {
 		assertThat(fizzBuzz(15), is("fizzbuzz"));
 	}
 
@@ -43,12 +41,12 @@ public class FizzBuzzShould {
 
 		String result = "1";
 
-		if (num % 3 == 0){
+		if (num % 15 == 0) {
+			result = "fizzbuzz";
+		} else
+		if (num % 3 == 0) {
 			result = "fizz";
-			if(num % 5 == 0){
-				result+="buzz";
-			}
-		} else if (num % 5 == 0){
+		} else if (num % 5 == 0) {
 			result = "buzz";
 		}
 
