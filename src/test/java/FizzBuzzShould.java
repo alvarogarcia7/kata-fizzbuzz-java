@@ -17,11 +17,6 @@ public class FizzBuzzShould {
 	}
 
 	@Test
-	public void calculate_fizzbuzz_for_three(){
-		assertThat(fizzBuzz(3), is("fizz"));
-	}
-
-	@Test
 	public void calculate_fizzbuzz_for_five(){
 		assertThat(fizzBuzz(5), is("buzz"));
 	}
