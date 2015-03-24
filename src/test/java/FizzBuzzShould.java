@@ -49,7 +49,7 @@ public class FizzBuzzShould {
 			if(num % 5 == 0){
 				result+="buzz";
 			}
-		} else if (num == 5){
+		} else if (num % 5 == 0){
 			result = "buzz";
 		}
 
