@@ -20,7 +20,12 @@ public class FizzBuzzShould {
 	}
 
 	private String fizzBuzz (final int num) {
-		return "1";
+
+		if (num % 3 == 0){
+			return "fizz";
+		} else {
+			return "1";
+		}
 	}
 }
 
