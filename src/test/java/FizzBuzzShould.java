@@ -41,16 +41,24 @@ public class FizzBuzzShould {
 
 		String result = "1";
 
-		if (num % 15 == 0) {
-			result = "fizzbuzz";
+		if (isDivisibleBy3(num) && isDivisibleBy5(num)) {
+			result = "fizz"+"buzz";
 		} else
-		if (num % 3 == 0) {
+		if (isDivisibleBy3(num)) {
 			result = "fizz";
-		} else if (num % 5 == 0) {
+		} else if (isDivisibleBy5(num)) {
 			result = "buzz";
 		}
 
 		return result;
+	}
+
+	private boolean isDivisibleBy5 (final int num) {
+		return num % 5 == 0;
+	}
+
+	private boolean isDivisibleBy3 (final int num) {
+		return num % 3 == 0;
 	}
 }
 
