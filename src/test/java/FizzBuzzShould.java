@@ -24,16 +24,16 @@ public class FizzBuzzShould {
 	@Test
 	public void calculate_fizzbuzz_for_multiples_of_3(){
 
-		for (int i = 3; i < MAX_TEST; i+=3)
+		for (int i = 3; i < 3*5; i+=3)
 		{
 			assertThat(fizzBuzz(i), is("fizz"));
 		}
 	}
 
-//	@Test
-//	public void calculate_fizzbuzz_for_fifteen(){
-//		assertThat(fizzBuzz(15), is("fizzbuzz"));
-//	}
+	@Test
+	public void calculate_fizzbuzz_for_fifteen(){
+		assertThat(fizzBuzz(15), is("fizzbuzz"));
+	}
 
 	private String fizzBuzz (final int num) {
 
@@ -41,6 +41,9 @@ public class FizzBuzzShould {
 
 		if (num % 3 == 0){
 			result = "fizz";
+			if(num % 5 == 0){
+				result+="buzz";
+			}
 		} else if (num == 5){
 			result = "buzz";
 		}
