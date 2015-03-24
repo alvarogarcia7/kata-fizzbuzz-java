@@ -14,6 +14,11 @@ public class FizzBuzzShould {
 		assertThat(fizzBuzz(1), is("1"));
 	}
 
+	@Test
+	public void return_fizz_for_an_input_dividing_three(){
+		assertThat(fizzBuzz(3), is("fizz"));
+	}
+
 	private String fizzBuzz (final int num) {
 		return "1";
 	}
