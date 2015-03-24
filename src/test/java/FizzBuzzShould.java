@@ -19,12 +19,19 @@ public class FizzBuzzShould {
 		assertThat(fizzBuzz(3), is("fizz"));
 	}
 
+	@Test
+	public void calculate_fizzbuzz_for_five(){
+		assertThat(fizzBuzz(5), is("buzz"));
+	}
+
 	private String fizzBuzz (final int num) {
 
 		String result = "1";
 
 		if (num % 3 == 0){
 			result = "fizz";
+		} else if (num == 5){
+			return "buzz";
 		}
 
 		return result;
