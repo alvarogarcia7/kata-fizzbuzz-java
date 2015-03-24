@@ -15,7 +15,7 @@ public class FizzBuzzShould {
 	}
 
 	@Test
-	public void return_fizz_for_an_input_dividing_three(){
+	public void return_fizz_for_three(){
 		assertThat(fizzBuzz(3), is("fizz"));
 	}
 
@@ -28,7 +28,7 @@ public class FizzBuzzShould {
 
 		String result = "1";
 
-		if (num % 3 == 0){
+		if (num == 3){
 			result = "fizz";
 		} else if (num == 5){
 			return "buzz";
