@@ -39,10 +39,10 @@ public class FizzBuzzShould {
 
 		String result = "1";
 
-		if (num == 3){
+		if (num % 3 == 0){
 			result = "fizz";
 		} else if (num == 5){
-			return "buzz";
+			result = "buzz";
 		}
 
 		return result;
